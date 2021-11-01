@@ -1,10 +1,9 @@
+import Button from 'components/Button';
 
 function App() {
-  return (
-    <div className="App   ">
-   this is the indicina
-    </div>
-  );
+  return <div className="App">
+    <Button/>
+  </div>;
 }
 
 export default App;
