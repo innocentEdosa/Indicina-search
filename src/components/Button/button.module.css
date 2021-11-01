@@ -1,5 +1,19 @@
 .button {
-    background-color: var(--bg-primary-dark);
-    color: var(--text-primary-white);
-    font-family: var(--font-primary);
+  display: flex;
+  border-radius: var(--border-radius-regular);
+  line-height: 1;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-primary-grey);
+  font: var(--font-weight-bold) 1.6rem / 2.1rem var(--font-primary);
+  color: var(--text-primary-white);
+}
+
+.standard {
+  padding: 1.5rem 3rem 1.4rem 3.1rem;
+}
+
+.small {
+  padding: 1rem 3.4rem 0.9rem 3.4rem;
 }

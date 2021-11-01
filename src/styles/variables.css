@@ -1,44 +1,42 @@
 :root {
-        /* Main colors used (https://www.color-blindness.com/color-name-hue/) */
+  /* Main colors used (https://www.color-blindness.com/color-name-hue/) */
 
-    /* background colors */
-    --bg-primary-dark: #000;
-    --bg-primary-white: #fff;
-    --bg-secondary-white: #F7F7F8;
-    -bg-primary-lilac: #DCDCDF;
-    --bg-secondary-lilac: #B0B7C3;
+  /* background colors */
+  --bg-primary-dark: #000;
+  --bg-primary-white: #fff;
+  --bg-secondary-white: #f7f7f8;
+  -bg-primary-lilac: #dcdcdf;
+  --bg-secondary-lilac: #b0b7c3;
+  --bg-primary-grey: #5c5c5c;
 
+  /* text colors */
+  --text-primary-grey: var(--bg-primary-grey);
+  --text-secondary-grey: #c4c4c4;
+  --text-tertiary-grey: #91929e;
+  --text-primary-white: var(--bg-primary-white);
+  --text-primary-dark: var(--bg-primary-dark);
+  --text-secondary-lilac: var(--bg-secondary-lilac);
+  --text-secondary-dark: #1c1c1c;
+  --text-primary-red: #ff1733;
 
-    /* text colors */
-    --text-primary-grey: #5C5C5C;
-    --text-secondary-grey: #C4C4C4;
-    --text-tertiary-grey: #91929E;
-    --text-primary-white: var(--bg-primary-white);
-    --text-primary-dark: var(--bg-primary-dark);
-    --text-secondary-lilac: var(--bg-secondary-lilac);
-    --text-secondary-dark: #1C1C1C;
-    --text-primary-red: #FF1733;
+  /* fonts */
+  --font-primary: 'DM Sans', sans-serif;
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
 
-  
-    /* fonts */
-    --font-primary: 'DM Sans', sans-serif;
-    --font-weight-regular: 400;
-    --font-weight-bold: 700;
-  
-    /* sizes */
-    --max-outer-content-width: 1856px;
-    --max-inner-content-width: 1256px;
-  
-    /* borders */
-    --border-radius-sm: 3px;
-    --border-radius-regular: 10px;
-    --border-radius-large: 10rem;
-  
+  /* sizes */
+  --max-outer-content-width: 1856px;
+  --max-inner-content-width: 1256px;
+
+  /* borders */
+  --border-radius-sm: 3px;
+  --border-radius-regular: 5px;
+  --border-radius-medium: 10px;
+  --border-radius-large: 10rem;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --max-inner-content-width: 1376px;
   }
-  
-  @media (min-width: 768px) {
-    :root {
-      --max-inner-content-width: 1376px;
-    }
-  }
-  
+}

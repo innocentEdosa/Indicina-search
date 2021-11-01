@@ -1,4 +1,3 @@
-
 *,
 *::before,
 *::after {
@@ -43,17 +42,9 @@ Improve consistency of default fonts in all browsers. (https://github.com/sindre
 */
 
 body {
-  font-family:
-        'DM Sans',
-        sans-serif,
-		system-ui,
-		-apple-system, /* Firefox supports this but not yet `system-ui` */
-		'Segoe UI',
-		Roboto,
-		Helvetica,
-		Arial,
-		'Apple Color Emoji',
-		'Segoe UI Emoji';
+  font-family: 'DM Sans', sans-serif, system-ui, -apple-system,
+    /* Firefox supports this but not yet `system-ui` */ 'Segoe UI', Roboto, Helvetica, Arial, 'Apple Color Emoji',
+    'Segoe UI Emoji';
 }
 
 /*
@@ -82,7 +73,7 @@ Add the correct text decoration in Chrome, Edge, and Safari.
 
 abbr[title] {
   -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  text-decoration: underline dotted;
 }
 
 /**
@@ -103,13 +94,7 @@ code,
 kbd,
 samp,
 pre {
-  font-family:
-		ui-monospace,
-		SFMono-Regular,
-		Consolas,
-		'Liberation Mono',
-		Menlo,
-		monospace; /* 1 */
+  font-family: ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace; /* 1 */
   font-size: 1em; /* 2 */
 }
 
@@ -183,7 +168,8 @@ Remove the inheritance of text transform in Edge and Firefox.
 */
 
 button,
-select { /* 1 */
+select {
+  /* 1 */
   text-transform: none;
 }
 
@@ -355,7 +341,8 @@ ul {
  */
 
 html {
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 1 */
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+    'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; /* 1 */
   line-height: 1.5; /* 2 */
 }
 
@@ -437,7 +424,7 @@ textarea::placeholder {
 }
 
 button,
-[role="button"] {
+[role='button'] {
   cursor: pointer;
 }
 
@@ -494,7 +481,7 @@ pre,
 code,
 kbd,
 samp {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
 }
 
 /**
@@ -524,7 +511,7 @@ object {
  * https://github.com/mozdevs/cssremedy/issues/14
  */
 
-img{
+img {
   max-width: 100%;
   height: auto;
 }
