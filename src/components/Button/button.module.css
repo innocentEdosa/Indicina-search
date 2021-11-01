@@ -1,0 +1,5 @@
+.button {
+    background-color: var(--bg-primary-dark);
+    color: var(--text-primary-white);
+    font-family: var(--font-primary);
+}
