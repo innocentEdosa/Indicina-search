@@ -1,0 +1,8 @@
+.msg {
+  font-size: 1.4rem;
+  line-height: 2rem;
+  margin-top: 1.2rem;
+  margin-bottom: 0;
+  color: var(--text-secondary-error);
+  font-weight: var(--font-weight-normal);
+}
