@@ -1,0 +1,26 @@
+.inputWrapper {
+  position: relative;
+}
+
+.controlledInput {
+  width: 100%;
+  font: var(--font-weight-regular) 1.4rem / 1.8rem var(--font-primary);
+  color: var(--text-primary-dark);
+  padding: 1.1rem 1.5rem;
+  outline: none;
+  border: 1px solid var(--text-secondary-grey);
+  border-radius: var(--border-radius-large);
+}
+
+.controlledInput::placeholder {
+  color: var(--text-tertiary-grey);
+}
+
+.inputSuffix {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 2rem;
+  display: flex;
+  align-items: center;
+}
