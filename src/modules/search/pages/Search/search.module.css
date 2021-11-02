@@ -1,0 +1,7 @@
+.formSection {
+    height: calc(100vh - 8rem);
+}
+
+.navSection {
+    height: 8rem;
+}

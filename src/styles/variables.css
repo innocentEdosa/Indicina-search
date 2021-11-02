@@ -35,6 +35,9 @@
   --border-radius-large: 10rem;
 }
 
+
+
+
 @media (min-width: 768px) {
   :root {
     --max-inner-content-width: 1376px;
