@@ -1,0 +1,27 @@
+
+.searchForm {
+    padding: 2rem;
+    width: 100%;
+    height: max-content;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.searchInput {
+    height: 5rem;
+    padding-right: 5rem;
+}
+
+.inputWrapper {
+    margin-bottom: 3rem;
+}
+
+@media(min-width: 768px) {
+   .searchForm {
+       padding: 0;
+       width: 58rem;
+   }
+}

@@ -14,7 +14,7 @@ function ControlledInput(props: ControlledInputProps, ref: ForwardedRef<HTMLInpu
   }
 
   return (
-    <div className={wrapperClassName}>
+    <div className={clsx(styles.wrapper, wrapperClassName)}>
       <div className={styles.inputWrapper}>
         <input
           className={clsx(styles.controlledInput, inputClassName)}
