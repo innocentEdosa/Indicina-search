@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { QueryClientProvider } from 'react-query';
-import Login from 'modules/auth';
+import Login from 'modules/auth/Login';
 import queryClient from 'lib/api/queryClient';
 import AuthContextProvider from 'context/Auth/Auth';
 import * as routes from 'lib/routes';
