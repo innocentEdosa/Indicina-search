@@ -1,5 +1,5 @@
 import { useForm, Controller } from 'react-hook-form';
-import SearchInput from 'modules/search/components/SearchInput';
+import SearchInput from 'components/SearchInput';
 import Button from 'components/Button';
 import styles from './searchform.module.css';
 
