@@ -26,17 +26,17 @@
 
   /* sizes */
   --max-outer-content-width: 1856px;
-  --max-inner-content-width: 1256px;
+  --max-inner-content-width: 1200px;
 
   /* borders */
   --border-radius-sm: 3px;
   --border-radius-regular: 5px;
   --border-radius-medium: 10px;
   --border-radius-large: 10rem;
+
+  /* z index */
+  --dropdown-zindex: 10;
 }
-
-
-
 
 @media (min-width: 768px) {
   :root {
