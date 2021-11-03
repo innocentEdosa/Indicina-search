@@ -1,4 +1,5 @@
 import { useLocation, useHistory } from 'react-router-dom';
+import queryStringParser from 'query-string';
 import history from 'history';
 
 function getUrlSearchParams(location: history.Location) {
@@ -32,9 +33,16 @@ const useUrlQueryString = () => {
     return urlSearchParams.get(param);
   };
 
+  const parseUrlSearchParamsToObj = <T extends Record<string, any>>(): T => {
+    const params = getUrlSearchParams(location);
+    const obj = queryStringParser.parse(params.toString(), { arrayFormat: 'comma' });
+    return obj as T;
+  };
+
   return {
     addUrlSearchParam,
     getUrlSearchParamValue,
+    parseUrlSearchParamsToObj,
   };
 };
 
