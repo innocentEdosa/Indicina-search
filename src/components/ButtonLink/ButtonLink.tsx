@@ -4,7 +4,7 @@ import { HTMLAttributes } from 'react';
 import { ButtonProps } from 'components/Button/types';
 import styles from './buttonLink.module.css';
 
-type ButtonLinkProps = ButtonProps & HTMLAttributes<HTMLAnchorElement> & { href: string; as?: 'a' | 'router' };
+type ButtonLinkProps = ButtonProps & HTMLAttributes<HTMLAnchorElement | HTMLDivElement> & { href: string; as?: 'a' | 'router' };
 
 export default function ButtonLink({ children, className, as, href, ...rest }: ButtonLinkProps) {
   const defaultProps = {
@@ -15,9 +15,9 @@ export default function ButtonLink({ children, className, as, href, ...rest }: B
     case 'router':
       return (
         <Link to={href}>
-          <a {...defaultProps} {...rest}>
+          <div {...defaultProps} {...rest}>
             {children}
-          </a>
+          </div>
         </Link>
       );
 

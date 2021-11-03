@@ -9,6 +9,7 @@
   --bg-secondary-lilac: #b0b7c3;
   --bg-primary-grey: #5c5c5c;
   --bg-tertiary-grey: #fafbfc;
+  --bg-primary-silver: #f3f3f3;
 
   /* text colors */
   --text-primary-grey: var(--bg-primary-grey);

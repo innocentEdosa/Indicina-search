@@ -4,7 +4,7 @@
   display: flex;
   justify-content: start;
   flex-direction: column;
-  padding: 3rem;
+  padding: 3rem 3rem 10rem;
   align-items: start;
 }
 
