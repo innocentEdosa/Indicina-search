@@ -1,5 +1,11 @@
+import TopBar from 'components/TopBar';
+
 const SearchResult = () => {
-  return <div>this is the search result</div>;
+  return (
+    <section aria-label="Search result">
+      <TopBar />
+    </section>
+  );
 };
 
 export default SearchResult;
