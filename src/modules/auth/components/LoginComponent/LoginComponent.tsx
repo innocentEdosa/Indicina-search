@@ -6,6 +6,7 @@ import styles from './login.module.css';
 type LoginComponentProps = {
   onSuccess: (response: GithubSuccessResponse) => void;
   onFailure: (response: Error) => void;
+
   scope?: string;
 };
 

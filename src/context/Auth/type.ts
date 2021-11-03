@@ -11,4 +11,5 @@ export interface AuthContextType {
   onLoginError: (response: any) => void;
   isAuthenticated: boolean;
   token: string | null;
+  logout: () => void;
 }
