@@ -5,7 +5,7 @@ import { checkAuth } from 'hoc/checkAuth';
 const Login = () => {
   const { getUserToken, onLoginError } = useAuthContext();
 
-  return <LoginComponent onFailure={onLoginError} onSuccess={getUserToken} />;
+  return <LoginComponent scope="read:user" onFailure={onLoginError} onSuccess={getUserToken} />;
 };
 
 export default checkAuth(Login);

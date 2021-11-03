@@ -1,0 +1,76 @@
+.chevronIcon {
+  fill: var(--bg-primary-dark);
+  width: 1.2rem;
+  height: 0.699rem;
+  margin-left: 1rem;
+}
+
+.dropdownButton {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.userdropdown {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.dropdownMenu {
+  position: absolute;
+  width: 20rem;
+  right: 0;
+  padding-top: 3rem;
+  top: 2.1rem;
+  overflow: visible;
+  animation-duration: 0.25s;
+  animation-fill-mode: both;
+  box-shadow: 0px 2px 32px -12px rgba(3, 47, 63, 0.05);
+}
+
+.dropdownMenu[data-hidden='false'] {
+  visibility: visible;
+  animation-name: fade-in;
+}
+
+.dropdownMenu[data-hidden='true'] {
+  visibility: hidden;
+  pointer-events: none;
+  animation-name: fade-out;
+}
+
+.dropdownContentWrapper {
+  border: 1px solid rgba(196, 203, 214, 0.3);
+  box-sizing: border-box;
+  box-shadow: 0px 6px 58px rgba(196, 203, 214, 0.2);
+  border-radius: var(--border-radius-sm);
+  background-color: var(--bg-primary-white);
+  position: relative;
+  z-index: var(--dropdown-zindex);
+}
+
+.logoutBtn {
+  color: var(--text-primary-red);
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

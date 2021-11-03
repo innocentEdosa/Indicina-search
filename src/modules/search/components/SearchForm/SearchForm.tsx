@@ -24,22 +24,20 @@ const SearchForm = ({ onSubmit }: SearchFormProps) => {
 
   return (
     <form className={styles.searchForm} onSubmit={handleSubmit(onSubmit)} aria-label="search form">
-        <Controller
-          name="search"
-          control={control}
-          render={({ field }) => (
-            <SearchInput
-              {...field}
-              wrapperClassName={styles.inputWrapper}
-              inputClassName={styles.searchInput}
-              error={errors?.search?.message}
-            />
-          )}
-          rules={{ ...inputRules }}
-        />
-        <Button size="small">
-            Search Github
-        </Button>
+      <Controller
+        name="search"
+        control={control}
+        render={({ field }) => (
+          <SearchInput
+            {...field}
+            wrapperClassName={styles.inputWrapper}
+            inputClassName={styles.searchInput}
+            error={errors?.search?.message}
+          />
+        )}
+        rules={{ ...inputRules }}
+      />
+      <Button size="small">Search Github</Button>
     </form>
   );
 };

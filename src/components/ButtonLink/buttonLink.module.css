@@ -1,0 +1,8 @@
+.buttonLink {
+  font: var(--font-weight-regular) 1.6rem / 2.1rem var(--font-primary);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}

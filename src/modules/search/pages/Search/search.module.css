@@ -1,7 +1,23 @@
 .formSection {
-    height: calc(100vh - 8rem);
+  height: calc(100vh - 8rem);
 }
 
 .navSection {
-    height: 8rem;
+  height: 8rem;
+}
+
+.navWrapper {
+  max-width: var(--max-inner-content-width);
+  height: 100%;
+  display: flex;
+  justify-content: end;
+  margin: 0 auto;
+  align-items: center;
+  padding: 0 4rem;
+}
+
+@media (min-width: 1201px) {
+  .navWrapper {
+    padding: 0;
+  }
 }
