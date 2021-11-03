@@ -1,0 +1,34 @@
+.cardWrapper {
+  background-color: var(--bg-primary-white);
+  width: 100%;
+  padding: 2rem 2rem 2.3rem;
+  box-shadow: 0px 6px 58px rgba(196, 203, 214, 0.1);
+  border-radius: var(--border-radius-sm);
+}
+
+.cardWrapper + .cardWrapper {
+  margin-top: 2rem;
+}
+
+.userDetails {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.userLead {
+  font: var(--font-weight-normal) 1.4rem / 1.8rem var(--font-primary);
+  color: var(--text-tertiary-grey);
+}
+
+.description {
+  font: var(--font-weight-normal) 1.2rem / 1.6rem var(--font-primary);
+  color: var(--text-tertiary-grey);
+  margin-top: 0.6rem;
+}
+
+.userName {
+  font: var(--font-weight-bold) 1.6rem / 2.1rem var(--font-primary);
+  color: var(--text-primary-dark);
+  margin-right: 1rem;
+}

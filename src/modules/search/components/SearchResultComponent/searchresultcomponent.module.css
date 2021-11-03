@@ -1,0 +1,26 @@
+.resultWrapper {
+  background-color: var(--bg-tertiary-grey);
+  min-height: calc(100vh - 8rem);
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  padding: 3rem;
+  align-items: start;
+}
+
+.resultMain {
+  margin-top: 2rem;
+  width: 100%;
+  max-width: 68rem;
+}
+
+@media (min-width: 768px) {
+  .resultWrapper {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .resultMain {
+    margin: 0 0 0 2rem;
+  }
+}

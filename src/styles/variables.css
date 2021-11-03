@@ -5,9 +5,10 @@
   --bg-primary-dark: #000;
   --bg-primary-white: #fff;
   --bg-secondary-white: #f7f7f8;
-  -bg-primary-lilac: #dcdcdf;
+  --bg-primary-lilac: #dcdcdf;
   --bg-secondary-lilac: #b0b7c3;
   --bg-primary-grey: #5c5c5c;
+  --bg-tertiary-grey: #fafbfc;
 
   /* text colors */
   --text-primary-grey: var(--bg-primary-grey);
