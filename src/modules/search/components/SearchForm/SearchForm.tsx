@@ -3,7 +3,7 @@ import SearchInput from 'modules/search/components/SearchInput';
 import Button from 'components/Button';
 import styles from './searchform.module.css';
 
-type SearchFormType = {
+export type SearchFormType = {
   search: string;
 };
 
@@ -37,7 +37,9 @@ const SearchForm = ({ onSubmit }: SearchFormProps) => {
         )}
         rules={{ ...inputRules }}
       />
-      <Button size="small">Search Github</Button>
+      <Button type="submit" size="small">
+        Search Github
+      </Button>
     </form>
   );
 };

@@ -1,20 +1,11 @@
-import SearchComponent from 'modules/search/components/SearchComponent';
-import UserProfileDropdown from 'components/UserProfileDropdown';
-import styles from './search.module.css';
+import SearchPageSwitcher from 'modules/search/pages/SearchPageSwitcher';
+import useUrlQueryString from 'hooks/useUrlQueryString';
 
 const Search = () => {
-  return (
-    <section>
-      <nav className={styles.navSection}>
-        <div className={styles.navWrapper}>
-          <UserProfileDropdown />
-        </div>
-      </nav>
-      <div className={styles.formSection}>
-        <SearchComponent />
-      </div>
-    </section>
-  );
+  const { getUrlSearchParamValue } = useUrlQueryString();
+  const searchTerm = getUrlSearchParamValue('q');
+
+  return <SearchPageSwitcher hasSearchParams={!!searchTerm} />;
 };
 
 export default Search;

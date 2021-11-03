@@ -6,7 +6,7 @@ import queryClient from 'lib/api/queryClient';
 import AuthContextProvider from 'context/Auth/Auth';
 import * as routes from 'lib/routes';
 
-const SearchPage = lazy(() => import('modules/search/pages/Search'));
+const Search = lazy(() => import('modules/search/pages/Search'));
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
           <Router>
             <Switch>
               <Route exact path={routes.Root} component={Login} />
-              <Route path={routes.Search} component={SearchPage} />
+              <Route path={routes.Search} component={Search} />
             </Switch>
           </Router>
         </Suspense>
