@@ -1,0 +1,69 @@
+.container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.pageClassName {
+  width: 4rem;
+  height: 4rem;
+  font: var(--font-weight-regular) 1.6rem / 2.9rem var(--font-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem;
+
+  color: var(--text-secondary-lilac);
+}
+
+.activeClass {
+  color: var(--text-primary-dark);
+  flex-shrink: 0;
+}
+
+.activeLinkClassName {
+  color: var(--text-primary-dark) !important;
+}
+
+.nextPrevClassName {
+  display: flex;
+  height: 4rem;
+  overflow: hidden;
+  width: 4rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--border-radius-medium);
+  outline: none;
+  background-color: var(--bg-primary-silver);
+  --icon-fill: var(--bg-secondary-lilac);
+}
+
+.nextPrevClassName:hover {
+  background-color: var(--bg-primary-dark);
+  --icon-fill: var(--text-primary-white);
+}
+
+.disabledNextPrevClassName {
+  background-color: var(--bg-primary-silver);
+  border-radius: var(--border-radius-medium);
+}
+
+.icon {
+  stroke: var(--icon-fill);
+  height: 2rem;
+  width: 2rem;
+  margin-bottom: 0.4rem;
+  margin-right: 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rightIcon {
+  transform: rotate(180deg);
+  margin: 0.4rem 0 0;
+}
+
+.breakLinkClassName {
+  color: var(--text-secondary-lilac);
+}
