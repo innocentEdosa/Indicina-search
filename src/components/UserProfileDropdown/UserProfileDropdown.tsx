@@ -2,7 +2,7 @@ import { useCallback, useRef } from 'react';
 import clsx from 'clsx';
 import ChevronDown from 'components/Vectors/ChevronDown';
 import ButtonLink from 'components/ButtonLink';
-import { Root } from 'lib/routes';
+import { Logout } from 'lib/routes';
 import styles from './userprofiledropdown.module.css';
 import UserAvatar from 'components/UserAvatar';
 
@@ -48,7 +48,7 @@ const UserProfileDropdown = () => {
         </button>
         <div data-testid="user-dropdown-menu" data-hidden="true" ref={DropdownMenuEl} className={styles.dropdownMenu}>
           <div className={clsx(styles.dropdownContentWrapper, styles['top'])}>
-            <ButtonLink className={styles.logoutBtn} as="router" href={Root}>
+            <ButtonLink className={styles.logoutBtn} as="router" href={Logout}>
               Logout
             </ButtonLink>
           </div>

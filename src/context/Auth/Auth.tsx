@@ -32,6 +32,14 @@ const AuthContextProvider = (props: AuthProps) => {
 
   const onLoginError = (response: Error) => console.log(response);
 
+  const logout = () => {
+    localStorage.removeItem(tokenKey);
+    setAuthState({
+      token: '',
+      isAuthenticated: false,
+    });
+  };
+
   useEffect(() => {
     const token = localStorage.getItem(tokenKey);
     if (token) {
@@ -46,6 +54,7 @@ const AuthContextProvider = (props: AuthProps) => {
   const value = {
     getUserToken,
     onLoginError,
+    logout,
     token: authState.token,
     isAuthenticated: authState.isAuthenticated,
   };
