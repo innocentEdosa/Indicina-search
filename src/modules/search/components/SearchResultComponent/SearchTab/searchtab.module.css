@@ -8,6 +8,9 @@
 
 .searchTabItem {
   width: 100%;
+}
+
+.searchTabItem[data-active='true'] {
   background-color: var(--bg-secondary-white);
 }
 

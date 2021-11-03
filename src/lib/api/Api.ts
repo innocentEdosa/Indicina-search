@@ -1,4 +1,5 @@
 import ResponseError from 'lib/utils/ResponseError';
+import { GraphQLClient } from 'graphql-request';
 
 function isJsonResponse(contentType?: string | null) {
   if (!contentType) return false;
@@ -7,6 +8,20 @@ function isJsonResponse(contentType?: string | null) {
 
 export interface Transformer<In, Out> {
   (data: In): Out;
+}
+
+export async function customGraphlRequest<T, R = T>(
+  query: string,
+  variables?: Record<string, any>,
+  options?: RequestInit,
+  transform?: Transformer<R, any>,
+) {
+  const graphQLClient = new GraphQLClient(process.env.REACT_APP_GITHUB_GRAPHQL_ENDPOINT || '', options);
+  const res = await graphQLClient.request(query, variables);
+  if (transform) {
+    return transform(res);
+  }
+  return res;
 }
 
 export async function customFetchRequest<T, R = T>(
@@ -65,7 +80,24 @@ class Api {
   }
 
   setAuth(accessToken: string) {
-    this.defaultHeaders.Authorization = `Bearer ${accessToken}`;
+    this.defaultHeaders.Authorization = `bearer ${accessToken}`;
+  }
+
+  post<T, R = T>(
+    query: string,
+    variables?: Record<string, any>,
+    options?: ApiOptions,
+    transform?: Transformer<R, any>,
+  ) {
+    return this.graphqlRequest(
+      query,
+      variables,
+      {
+        method: 'POST',
+        ...(options || {}),
+      },
+      transform,
+    );
   }
 
   fetchPost<T, R = T>(
@@ -88,6 +120,20 @@ class Api {
   private request: typeof customFetchRequest = (path, options, transform) =>
     customFetchRequest(
       path,
+      {
+        ...options,
+        headers: {
+          ...this.defaultHeaders,
+          ...(options?.headers || {}),
+        },
+      },
+      transform,
+    );
+
+  private graphqlRequest: typeof customGraphlRequest = (query, variables, options, transform) =>
+    customGraphlRequest(
+      query,
+      variables,
       {
         ...options,
         headers: {
