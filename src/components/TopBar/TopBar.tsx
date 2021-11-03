@@ -1,19 +1,18 @@
+import { Link } from 'react-router-dom';
+import { Search } from 'lib/routes';
 import Logo from 'components/Vectors/Logo';
 import UserProfileDropdown from 'components/UserProfileDropdown';
-import SearchInput from 'components/SearchInput';
+import TopBarSearch from './TopBarSearch';
 import styles from './topbar.module.css';
 
 const TopBar = () => {
   return (
     <nav className={styles.topbar}>
       <div className={styles.navContent}>
-        <Logo className={styles.logo} />
-        <SearchInput
-          placeholder="Search"
-          inputClassName={styles.input}
-          wrapperClassName={styles.inputWrapper}
-          onChange={console.log}
-        />
+        <Link to={Search}>
+          <Logo className={styles.logo} />
+        </Link>
+        <TopBarSearch />
         <UserProfileDropdown />
       </div>
     </nav>

@@ -6,6 +6,7 @@ interface SearchDataContextProps<D, T> {
   isLoading: boolean;
   data?: D;
   params?: T;
+  type?: string;
   search?: string;
 }
 
@@ -19,19 +20,19 @@ export function createSearchDataContextProvider<D, T>(
 ) {
   return ({ children }: { children: React.ReactChild }) => {
     const urlQueryString = useUrlQueryString();
-    const params: T & { search?: string } = urlQueryString.parseUrlSearchParamsToObj();
+    const params: T & { q?: string; type?: string } = urlQueryString.parseUrlSearchParamsToObj();
 
     const { isLoading, data } = query(params);
 
     return (
-      <SearchContext.Provider value={{ search: params.search, isLoading, data, params }}>
+      <SearchContext.Provider value={{ search: params.q, isLoading, data, type: params?.type }}>
         {children}
       </SearchContext.Provider>
     );
   };
 }
 
-export function SearchDataContextFactory<D, T>(query: (params: T) => UseQueryResult<D>) {
+export function searchDataContextFactory<D, T>(query: (params: T) => UseQueryResult<D>) {
   const SearchContext = createSearchDataContext<D, T>();
   const SearchProvider = createSearchDataContextProvider<D, T>(query, SearchContext);
   const useSearchData = () => useContext<SearchDataContextProps<D, T> | undefined>(SearchContext);

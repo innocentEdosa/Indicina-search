@@ -17,12 +17,12 @@
 }
 
 .userLead {
-  font: var(--font-weight-normal) 1.4rem / 1.8rem var(--font-primary);
+  font: var(--font-weight-regular) 1.4rem / 1.8rem var(--font-primary);
   color: var(--text-tertiary-grey);
 }
 
 .description {
-  font: var(--font-weight-normal) 1.2rem / 1.6rem var(--font-primary);
+  font: var(--font-weight-regular) 1.2rem / 1.6rem var(--font-primary);
   color: var(--text-tertiary-grey);
   margin-top: 0.6rem;
 }
