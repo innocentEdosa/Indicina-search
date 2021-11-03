@@ -1,0 +1,35 @@
+.cardWrapper {
+  background-color: var(--bg-primary-white);
+  width: 100%;
+  padding: 2rem;
+  box-shadow: 0px 6px 58px rgba(196, 203, 214, 0.1);
+  border-radius: var(--border-radius-sm);
+}
+
+.cardWrapper + .cardWrapper {
+  margin-top: 2rem;
+}
+
+.repoDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.repoLead {
+  font: var(--font-weight-normal) 1.4rem / 1.8rem var(--font-primary);
+  color: var(--text-tertiary-grey);
+}
+
+.description {
+  font: var(--font-weight-normal) 1.2rem / 1.6rem var(--font-primary);
+  color: var(--text-tertiary-grey);
+  margin-top: 1.5rem;
+}
+
+.repoName {
+  font: var(--font-weight-bold) 1.6rem / 2.1rem var(--font-primary);
+  color: var(--text-primary-dark);
+  margin-right: 1rem;
+}
